@@ -84,3 +84,195 @@ a { text-decoration: none; color: inherit; }
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* LUMORA GLOBAL LUXURY HEADER */
+body {
+  background: #f8f6f1;
+  color: #39352f;
+}
+
+.announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 16px;
+  background: #443a2e;
+  color: #f9f5ed;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.lumora-nav {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: 100%;
+  min-height: 88px;
+  padding: 18px 5.8%;
+  background: #fcfaf6;
+  border-bottom: 1px solid #e9e2d7;
+  color: #39352f;
+}
+
+.lumora-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lumora-nav .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.lumora-nav .brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #b49a78;
+  border-radius: 50%;
+  color: #8b704e;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.lumora-nav .brand strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.lumora-nav .brand small {
+  display: block;
+  margin-top: 4px;
+  color: #887b6b;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.lumora-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.4vw, 36px);
+}
+
+.lumora-nav .nav-links a,
+.lumora-nav .login-link {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.lumora-nav .nav-links a:hover,
+.lumora-nav .login-link:hover {
+  color: #a17a52;
+}
+
+.lumora-nav .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.lumora-nav .bag-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 0 19px;
+  background: #514331;
+  color: #fffaf2;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.lumora-nav .bag-link:hover {
+  background: #79644d;
+}
+
+@media (max-width: 900px) {
+  .lumora-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 5%;
+  }
+
+  .lumora-nav .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding-top: 13px;
+    border-top: 1px solid #e9e2d7;
+  }
+
+  .lumora-nav .nav-actions {
+    margin-left: auto;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcement {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .lumora-nav {
+    gap: 12px;
+    padding: 14px 4%;
+  }
+
+  .lumora-nav .brand-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .lumora-nav .brand strong {
+    font-size: 15px;
+  }
+
+  .lumora-nav .brand small {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  .lumora-nav .nav-actions {
+    gap: 10px;
+  }
+
+  .lumora-nav .nav-links {
+    gap: 13px 18px;
+  }
+
+  .lumora-nav .nav-links a,
+  .lumora-nav .login-link {
+    font-size: 11px;
+  }
+
+  .lumora-nav .bag-link {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 9px;
+    gap: 5px;
+  }
+}
