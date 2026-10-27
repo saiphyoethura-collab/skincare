@@ -1,4 +1,5 @@
 import "./globals.css";
+import LumoraHeader from "./LumoraHeader";
 import { AuthProvider, CartProvider } from "../lib/AppProviders";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <AuthProvider>
           <CartProvider>
+            <LumoraHeader />
             {children}
           </CartProvider>
         </AuthProvider>
