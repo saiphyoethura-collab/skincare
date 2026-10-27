@@ -1,10 +1,9 @@
 import "./globals.css";
 import { AuthProvider, CartProvider } from "../lib/AppProviders";
-import NavBar from "./NavBar";
 
 export const metadata = {
-  title: "My Shop",
-  description: "Basic ecommerce app with Firebase login",
+  title: "LUMORA. | Skincare Studio",
+  description: "Thoughtful skincare for your everyday glow.",
 };
 
 export default function RootLayout({ children }) {
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
       <body>
         <AuthProvider>
           <CartProvider>
-            <NavBar />
             {children}
           </CartProvider>
         </AuthProvider>
