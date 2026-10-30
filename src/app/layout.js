@@ -1,6 +1,7 @@
 import "./globals.css";
 import LumoraHeader from "./LumoraHeader";
-import { AuthProvider, CartProvider } from "../lib/AppProviders";
+import LumoraFooter from "./LumoraFooter";
+import { AuthProvider, CartProvider, FavouritesProvider } from "../lib/AppProviders";
 
 export const metadata = {
   title: "LUMORA. | Skincare Studio",
@@ -13,8 +14,11 @@ export default function RootLayout({ children }) {
       <body>
         <AuthProvider>
           <CartProvider>
+            <FavouritesProvider>
             <LumoraHeader />
             {children}
+            <LumoraFooter />
+          </FavouritesProvider>
           </CartProvider>
         </AuthProvider>
       </body>

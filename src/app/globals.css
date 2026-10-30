@@ -276,3 +276,612 @@ body {
     gap: 5px;
   }
 }
+
+/* LUMORA — SHARED DESIGN SYSTEM */
+:root {
+  --lumora-bg: #f8f6f1;
+  --lumora-surface: #fcfaf6;
+  --lumora-text: #39352f;
+  --lumora-muted: #887b6b;
+  --lumora-accent: #8b704e;
+  --lumora-button: #514331;
+  --lumora-button-hover: #79644d;
+  --lumora-border: #e9e2d7;
+  --lumora-white: #fffaf2;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--lumora-bg);
+  color: var(--lumora-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--lumora-text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.3;
+}
+
+p, label, li {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.btn {
+  background: var(--lumora-button);
+  color: var(--lumora-white);
+  border-radius: 0;
+  font-size: 12px;
+}
+
+.btn:hover {
+  background: var(--lumora-button-hover);
+}
+
+.btn.secondary {
+  background: #eee8df;
+  color: var(--lumora-text);
+}
+
+.btn.secondary:hover {
+  background: #e2d8ca;
+}
+
+.card, .auth-box, .cart-row {
+  background: var(--lumora-surface);
+  color: var(--lumora-text);
+  border-color: var(--lumora-border);
+}
+
+.auth-box input,
+input,
+select,
+textarea {
+  color: var(--lumora-text);
+  border-color: #d8cbbb;
+}
+
+.announcement {
+  background: #443a2e;
+  color: #f9f5ed;
+}
+
+.lumora-nav {
+  background: var(--lumora-surface);
+  color: var(--lumora-text);
+  border-bottom-color: var(--lumora-border);
+}
+
+.lumora-nav .brand strong,
+.lumora-nav .brand-mark {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.lumora-nav .bag-link {
+  background: var(--lumora-button);
+  color: var(--lumora-white);
+}
+
+.lumora-nav .bag-link:hover {
+  background: var(--lumora-button-hover);
+}
+
+.error {
+  color: #b42318;
+}
+
+
+/* LUMORA FOOTER */
+.lumora-footer {
+  margin-top: 64px;
+  padding: 52px 5.8% 0;
+  background: #eee8df;
+  color: #39352f;
+  border-top: 1px solid #e0d6c8;
+}
+
+.lumora-footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 36px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+}
+
+.lumora-footer-brand {
+  max-width: 270px;
+}
+
+.lumora-footer-logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  letter-spacing: 3px;
+}
+
+.lumora-footer-logo span {
+  color: #8b704e;
+}
+
+.lumora-footer-brand p {
+  margin-top: 14px;
+  color: #75695b;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.lumora-footer-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.lumora-footer-group h3 {
+  margin: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.lumora-footer-group a {
+  color: #75695b;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.lumora-footer-group a:hover {
+  color: #8b704e;
+}
+
+.lumora-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 1px solid #d9cdbd;
+  color: #75695b;
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .lumora-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
+
+  .lumora-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .lumora-footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* LUMORA ABOUT PAGE */
+.about-page {
+  color: var(--lumora-text);
+}
+
+.about-hero {
+  padding: 100px 8% 110px;
+  text-align: center;
+  background: #f1ebe1;
+}
+
+.about-eyebrow {
+  margin: 0 0 20px;
+  color: var(--lumora-accent);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.about-hero h1 em {
+  color: var(--lumora-accent);
+  font-weight: 400;
+}
+
+.about-intro {
+  max-width: 540px;
+  margin: 24px auto 0;
+  color: var(--lumora-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 7%;
+}
+
+.about-content h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.about-content > div:last-child p {
+  margin: 0 0 18px;
+  color: var(--lumora-muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 15px 22px;
+  background: var(--lumora-button);
+  color: #fffaf2;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  padding: 55px 8%;
+  background: #f1ebe1;
+}
+
+.about-values article {
+  padding: 12px 0;
+}
+
+.about-values article span {
+  color: var(--lumora-accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.about-values h3 {
+  margin: 16px 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.about-values article p {
+  color: var(--lumora-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .about-hero {
+    padding: 75px 7%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 60px 7%;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 7%;
+  }
+}
+
+/* LUMORA CONTACT PAGE */
+.contact-page {
+  color: var(--lumora-text);
+}
+
+.contact-hero {
+  padding: 82px 7% 88px;
+  text-align: center;
+  background: #f1ebe1;
+}
+
+.contact-eyebrow {
+  margin: 0 0 18px;
+  color: var(--lumora-accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 400;
+}
+
+.contact-hero h1 em {
+  color: var(--lumora-accent);
+  font-weight: 400;
+}
+
+.contact-hero > p:last-child {
+  max-width: 480px;
+  margin: 20px auto 0;
+  color: var(--lumora-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 80px 7%;
+}
+
+.contact-info h2 {
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.contact-info > p:not(.contact-eyebrow) {
+  color: var(--lumora-muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.contact-note {
+  margin-top: 36px;
+  padding: 22px;
+  background: #f1ebe1;
+}
+
+.contact-note span {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+}
+
+.contact-note p {
+  margin-bottom: 0;
+  color: var(--lumora-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid var(--lumora-border);
+  border-radius: 0;
+  background: var(--lumora-surface);
+  color: var(--lumora-text);
+  font: inherit;
+  font-size: 12px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 12px;
+  padding: 16px;
+  border: 0;
+  background: var(--lumora-button);
+  color: var(--lumora-white);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.contact-form-note {
+  color: var(--lumora-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .contact-hero {
+    padding: 65px 7%;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 7%;
+  }
+}
+
+/* CONTACT FORM LAYOUT FIX */
+.contact-page .contact-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-page .contact-form label {
+  display: block !important;
+  width: 100%;
+  margin: 8px 0 0 !important;
+  line-height: 1.5;
+}
+
+.contact-page .contact-form input,
+.contact-page .contact-form select,
+.contact-page .contact-form textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 14px 15px !important;
+  border: 1px solid #e9e2d7 !important;
+  border-radius: 0 !important;
+  background: #fcfaf6 !important;
+  color: #39352f !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+.contact-page .contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-page .contact-form button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.contact-page .contact-form .contact-form-note {
+  display: block;
+  margin: 4px 0 0;
+  line-height: 1.8;
+}
+
+
+/* LUMORA POLICY PAGES */
+.policy-page {
+  color: var(--lumora-text);
+}
+
+.policy-hero {
+  padding: 76px 7% 82px;
+  text-align: center;
+  background: #f1ebe1;
+}
+
+.policy-eyebrow {
+  margin: 0 0 18px;
+  color: var(--lumora-accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.policy-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 400;
+}
+
+.policy-hero h1 em {
+  color: var(--lumora-accent);
+  font-weight: 400;
+}
+
+.policy-hero > p:last-child {
+  max-width: 520px;
+  margin: 20px auto 0;
+  color: var(--lumora-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 58px 7% 80px;
+}
+
+.policy-updated {
+  margin-bottom: 35px;
+  color: var(--lumora-muted);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.policy-content section {
+  margin-bottom: 30px;
+}
+
+.policy-content h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.policy-content section p,
+.policy-note {
+  color: var(--lumora-muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.policy-note {
+  margin-top: 38px;
+  padding: 20px;
+  background: #f1ebe1;
+}
+
+@media (max-width: 700px) {
+  .policy-hero {
+    padding: 60px 7%;
+  }
+
+  .policy-content {
+    padding: 42px 7% 60px;
+  }
+}
+
+/* LUMORA Account Luxury Design */
+.policy-content:has(.orders-shop-button) { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+.policy-content:has(.orders-shop-button) > div { background: #fffcf8 !important; border: 1px solid #e6d9c9 !important; border-radius: 20px !important; padding: 44px !important; box-shadow: 0 16px 48px rgba(73,55,38,.07); }
+.policy-content:has(.orders-shop-button) h2 { color: #40342b; font-size: 30px; font-weight: 500; }
+.policy-content:has(.orders-shop-button) .orders-shop-button { background: #493d32; color: white; border-radius: 8px; padding: 15px 28px; text-decoration: none; }
+.policy-content:has(.orders-shop-button) button { border-radius: 8px !important; padding: 15px 28px !important; }

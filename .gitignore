@@ -1,3 +1,9 @@
 node_modules/
 .next/
 .env.local
+
+# Local development backups
+*.backup
+*.backup.*
+*.before-*
+*.header-backup

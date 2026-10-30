@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useAuth } from "../lib/AppProviders";
 
 export default function LumoraHeader() {
+  const { user, loading } = useAuth();
   return (
     <>
       <div className="announcement">
@@ -22,11 +24,17 @@ export default function LumoraHeader() {
           <Link href="/">Home</Link>
           <Link href="/products">Shop All</Link>
           <a href="#bestsellers">Best Sellers</a>
-          <a href="#about">Our Philosophy</a>
+          <Link href="/about">Our Philosophy</Link>
         </div>
 
         <div className="nav-actions">
-          <Link href="/login" className="login-link">Account</Link>
+          {loading ? (
+            <span className="login-link">Account</span>
+          ) : user ? (
+            <Link href="/account" className="login-link">My Account</Link>
+          ) : (
+            <Link href="/login" className="login-link">Login / Register</Link>
+          )}
           <Link href="/products" className="bag-link">
             SHOP NOW <span>↗</span>
           </Link>

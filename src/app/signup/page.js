@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../lib/firebase";
+import { auth, db } from "../../lib/firebase";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -16,7 +17,12 @@ export default function SignupPage() {
     e.preventDefault();
     setError("");
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const credential = await createUserWithEmailAndPassword(auth, email, password);
+
+      await setDoc(doc(db, "users", credential.user.uid), {
+        email: credential.user.email,
+        createdAt: serverTimestamp(),
+      });
       router.push("/");
     } catch (err) {
       setError(err.message);
